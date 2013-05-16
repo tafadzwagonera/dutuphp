@@ -74,7 +74,7 @@ it. It's that straight forward.
 Builders
 ________
 
-``select|update|delete|insert(table, [fields])`` methods are the "builders".
+``select|update|delete|insert(table, [fields])`` methods are the **builders**.
 Builders build up queries.
 
 ``$db->select(table, [fields])`` maps to ``"SELECT [fields] FROM table WHERE ..."``
@@ -88,7 +88,7 @@ Builders build up queries.
 Modifiers
 _________
 
-``modifiers()`` are "modifiers". They change the result set
+``modifiers()`` are **modifiers**. They change the result set
 returned by SQLstatement for the most part we use modifiers to alter
 the result set returned by SELECT statement.
 
@@ -115,7 +115,7 @@ Executors
 _________
 
 
-``execute|rowCount|fetch|fetchAll(...)`` are "executors". They execute the
+``execute|rowCount|fetch|fetchAll(...)`` are **executors**. They execute the
 queries built up by builders and altered by modifiers. Each executor returns
 a value on the query it executes:
 
