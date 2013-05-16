@@ -88,7 +88,7 @@ Builders build up queries.
 Modifiers
 _________
 
-``modifiers()`` are well "modifiers". They change the result set
+``modifiers()`` are "modifiers". They change the result set
 returned by SQLstatement for the most part we use modifiers to alter
 the result set returned by SELECT statement.
 
