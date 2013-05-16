@@ -187,14 +187,14 @@ ______
 
 ``$fields = array('id' => '', 'text' => 'Tanya');``
 
-``$this->db->insert('data', $fields)->rowCount(); `` maps to ``"INSERT INTO data(id, text) VALUES('', 'Tanya')"``
+``$db->insert('data', $fields)->rowCount(); `` maps to ``"INSERT INTO data(id, text) VALUES('', 'Tanya')"``
 
 Update
 ______
 
 ``$fields = array('text' => 'Tapiwa');``
 
-``$this->db->update('data', $fields)->where("id = 4")->rowCount();`` maps to ``"UPDATE data SET text = 'Tapiwa' WHERE id = 4"``
+``$db->update('data', $fields)->where("id = 4")->rowCount();`` maps to ``"UPDATE data SET text = 'Tapiwa' WHERE id = 4"``
 
 Delete
 ______
