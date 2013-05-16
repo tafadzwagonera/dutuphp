@@ -10,8 +10,8 @@ learning them wouldn't be so much of a hassle? If you were wishing
 badly for these to happen then look no further, DutuPHP is the
 right tool for you.
 
-So, what is DutuPHP? **It's a unified, object oriented database access API
-for both PDO and mysqli.** DutuPHP supports 5.3 and later versions. If
+So, what is DutuPHP? It's a unified, object oriented database access API
+for both PDO and mysqli. DutuPHP supports PHP 5.3 and later versions. If
 you want to know more about DutuPHP visit dutuphp.com_, for the most
 part this article focuses on bringing you up to speed with using
 DutuPHP so let's dive into that.
