@@ -36,7 +36,7 @@ and this how we do it using PDO::
   $rows = $sth->fetch(PDO::FETCH_NUM);
   echo $rows[0];
   
-but using DutuPHP, we just do it this way::
+but using DutuPHP's unified OO API, we just do it this way::
 
   // configuration object
   $config = new MyConfig();
