@@ -41,11 +41,13 @@ but using DutuPHP, we just do it this way::
   // configuration object
   $config = new MyConfig();
   
-  // create a mysqli implementation
-  printr($db->select("data")->rowCount());
+  // for mysqli
+  $db = new MysqliImpl($config);
+  $db->select("data")->rowCount();
   
-  // ... boom! ... switch to a PDO implementation
-  printr($db->select("data")->rowCount());
+  // ... boom!... switch to PDO 
+  $db = new PDOImpl($config);
+  $db->select("data")->rowCount();
   
   // Awesome, isn't it? Oh, and don't forget to wrap the PDO version
   // inside the try {} catch() {} block
