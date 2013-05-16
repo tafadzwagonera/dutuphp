@@ -23,11 +23,18 @@ Suppose we want to find out how many rows we have in a table
 
 This is how we do it using mysqli::
 
-  //some long boring code
+  // create a database connection $db
+  $result = $db->query("SELECT COUNT(*) FROM data");
+  $row = $result->fetch_row();
+  echo '#: ', $row[0];
   
 and this how we do it using PDO::
 
-  //some long boring code
+  // create a database connection $db
+  $sth = $db->prepare("SELECT count(*) FROM FROM data");
+  $sth->execute();
+  $rows = $sth->fetch(PDO::FETCH_NUM);
+  echo $rows[0];
   
 but using DutuPHP, we just do it this way::
 
@@ -36,11 +43,11 @@ but using DutuPHP, we just do it this way::
   
   // for mysqli
   $db = new MysqliImpl($config);
-  $db->select("data")->rowCount();
+  printr($db->select("data")->rowCount());
   
   // ... boom! ... switch to PDO
   $db = new PDOImpl($config);
-  $db->select("data")->rowCount();
+  printr($db->select("data")->rowCount());
   
   // Awesome, isn't it? Oh, and don't forget to wrap the PDO version
   // inside the try {} catch() {} block
