@@ -5,7 +5,7 @@ Have you ever wished to query the database in PHP without writing
 straight SQL but using objects and methods only? Have you ever 
 wished that if mysqli and PDO weren't so disparate they would have
 an identical interface API which could acccess the database
-regardless of which database access strategy you use and perhaps
+regardless of which database access class you use and perhaps
 learning them wouldn't be so much of a hassle? If you were wishing
 badly for these to happen then look no further, DutuPHP is the
 right tool for you.
