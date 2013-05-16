@@ -23,14 +23,14 @@ Suppose we want to find out how many rows we have in a table
 
 This is how we do it using mysqli::
 
-  // create a database connection $db
+  // create a mysqli object: $db
   $result = $db->query("SELECT COUNT(*) FROM data");
   $row = $result->fetch_row();
   echo '#: ', $row[0];
   
 and this how we do it using PDO::
 
-  // create a database connection $db
+  // create a PDO object: $db
   $sth = $db->prepare("SELECT count(*) FROM FROM data");
   $sth->execute();
   $rows = $sth->fetch(PDO::FETCH_NUM);
