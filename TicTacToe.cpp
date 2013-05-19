@@ -126,17 +126,17 @@ class TicTacToe {
     // get the column
     void getCol() {
       validCol = false;
-       
+
       //Loop until the player selects a valid column
       while (!validCol) {
-		    std::cout << "Column: ";
-		    std::cin >> col;
-		    if (col == 1 || col == 2 || col == 3) {
-			    validCol = true;
-		    } else {
-			    std::cout << std::endl << "Invalid column!" << std::endl;
-		    }
-	    }
+        std::cout << "Column: ";
+        std::cin >> col;
+        if (col == 1 || col == 2 || col == 3) {
+          validCol = true;
+        } else {
+          std::cout << std::endl << "Invalid column!" << std::endl;
+        }
+      }
     }
          
     void switchPlayer() {
