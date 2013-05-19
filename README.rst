@@ -188,7 +188,7 @@ ______
 
 ``$fields = array('id' => '', 'text' => 'Tanya');``
 
-``$db->insert('data', $fields)->rowCount(); `` maps to ``"INSERT INTO data(id, text) VALUES('', 'Tanya')"``
+``$db->insert('data', $fields)->rowCount();`` maps to ``"INSERT INTO data(id, text) VALUES('', 'Tanya')"``
 
 Update
 ______
