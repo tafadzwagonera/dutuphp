@@ -153,11 +153,25 @@ Examples you can try out
 
 Suppose we have the following table structure::
 
-// Some CREATE TABLE ... SQL
+  --
+  -- Table structure for table `data`
+  --
 
-and the following data::
+  CREATE TABLE IF NOT EXISTS `data` (
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `name` varchar(255) NOT NULL,
+    PRIMARY KEY (`id`)
+  ) ENGINE=InnoDB  DEFAULT CHARSET=latin1;
 
-// Some INSERT INTO TABLE ... SQL
+with the following data::
+
+  INSERT INTO `data` (`id`, `name`) VALUES
+  (1, 'Tanya'),
+  (2, 'Tadiwa'),
+  (3, 'Tinashe'),
+  (4, 'Tanaka'),
+  (5, 'Tanya'),
+  (6, 'Tapiwa');
 
 
 Select
