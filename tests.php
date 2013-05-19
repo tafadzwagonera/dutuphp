@@ -7,7 +7,7 @@ require 'lib/config/AbstractConfig.php';
 require 'lib/dutuphp/MysqliImpl.php';
 require 'lib/dutuphp/PDOImpl.php';
 
-// step 4: Create a configuration object by extending AbstractConfig.php
+// step 4: Create a configuration object by extending AbstractConfig
 
 class MyConfig extends AbstractConfig {
 	public function init()	{
@@ -34,7 +34,7 @@ class MyConfig extends AbstractConfig {
 // a PDOImpl or MysqliImpl constructor
 $config = new MyConfig();
 
-// create a MysqliImpl.php to use mysqli
+// instatiante MysqliImpl to use mysqli
 echo "mysqli <br>";
 $db = new MysqliImpl($config);
 print_r($db->select("data")->count()->fetch(MYSQLI_ASSOC));
