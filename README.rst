@@ -59,11 +59,10 @@ Installation
 1. Download_ DutuPHP
 2. Copy and paste the ``lib`` directory in your project's library folder.
 3. ``include`` these files: ``AbstractConfig.php``, ``MysqliImpl.php`` and ``PDOImpl.php``  
-4. Create a configuration object by extending ``AbstractConfig.php`` and overwrite the default database settings
-5. Instatiate either ``MsyqliImpl`` or ``PDOImpl`` class and run a few queries
+4. Create a configuration object by extending ``AbstractConfig.php``, overwrite the default database settings and pass it to a ``MysqliImpl or PDOImpl constructor`` 
 
 
-An illustration of steps 3-5 can be found here_.
+An illustration of steps 3-4 can be found here_.
 
 .. _Download: https://github.com/tafadzwagonera/dutuphp/archive/master.zip
 .. _here: https://github.com/tafadzwagonera/dutuphp/blob/master/tests.php
