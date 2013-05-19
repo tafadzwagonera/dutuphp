@@ -215,13 +215,13 @@ we get whatever number of rows the table had that were deleted.::
 Conclusion
 ==========
 
-DutuPHP v1.0.0 is an upcoming database access API thus it does not
-cover the entire breadth of SQL features and it might be buggy of course.
-What it covers for now are the basic features of SQL.Advanced features such
-as joins and SQL functions will be covered in later versions of the project.
+DutuPHP is an upcoming database access API for PHP 5.3x and later releases
+which is still under development. Using the API comes with the caveats that
+several features are either incomplete or not yet implemented and users may
+encounter bugs. These and other issues which will be identified and brought
+to our attention will be resolved by later versions of DutuPHP.
 
-Visit dutuphp.com_ to see a full catalogue of SQL features supported by 
-DutuPHP.
+Visit dutuphp.com_ to learn more about DutuPHP.
 
 .. _dutuphp.com: http://www.dutuphp.com/
 
