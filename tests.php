@@ -30,7 +30,8 @@ class MyConfig extends AbstractConfig {
 	}
 }
 
-// create a configuration object
+// instantiate configuration object pass it to
+// a PDOImpl or MysqliImpl constructor
 $config = new MyConfig();
 
 // create a MysqliImpl.php to use mysqli
