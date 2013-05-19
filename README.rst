@@ -88,9 +88,8 @@ Builders build up queries.
 Modifiers
 _________
 
-``modifiers()`` are **modifiers**. They change the result set
-returned by SQLstatement for the most part we use modifiers to alter
-the result set returned by SELECT statement.
+**Modifiers** change the result set returned by SQLstatement for the most
+part we use modifiers to alter the result set returned by SELECT statement.
 
 ``$db->select("data")->where("id = 3")...`` maps to ``"SELECT * FROM data WHERE id = 3"``
 
@@ -138,7 +137,10 @@ You can change the return type of ``fetch()`` and ``fetchAll`` using the
 methods directly.The executor is the guy you want to call at the end of your
 chained call everytime otherwise you won't get any results.
 
-Let's wrap it up with an example:
+Using the table structure in the following section_ let's wrap it up with
+an example:
+
+.. _section: https://github.com/tafadzwagonera/dutuphp/edit/master/README.rst#examples-you-can-try-out
 
 SQL: ``"SELECT * FROM data WHERE id = 3"``::
 
