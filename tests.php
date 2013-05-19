@@ -1,7 +1,7 @@
 <?php
 
 // step 3: require AbstractConfig.php, MysqliImpl.php and PDOImpl.php
-// require 'path/to/lib/[file.php]';
+// require 'path/to/lib/directory/[file.php]';
 
 require 'lib/config/AbstractConfig.php';
 require 'lib/dutuphp/MysqliImpl.php';
