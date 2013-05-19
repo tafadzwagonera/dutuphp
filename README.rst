@@ -120,15 +120,15 @@ queries built up by builders and altered by modifiers. Each executor returns
 *something* when it's invoked: That *something* could be a boolean, array or
 just a integer depending on which method was invoked.
 
-``...->execute();`` maps to ``returns {boolean} a true or false value;``
+``...->execute(); returns {boolean} a true or false value;``
 
-``...->rowCount();`` maps to ``returns {integer} the number of rows satisfying the condition of the query``
+``...->rowCount(); returns {integer} the number of rows satisfying the condition of the query``
 
-``...->fetch();`` maps to ``returns {array} a row satisfying the condition of the query``
+``...->fetch(); returns {array} a row satisfying the condition of the query``
 
-``...->fetchAll();`` maps to ``returns {array of arrays} a number of rows satisfying the condition of the query``
+``...->fetchAll(); returns {array of arrays} a number of rows satisfying the condition of the query``
 
-``...->query();`` maps to ``returns {string} the generated query (useful for debugging purposes)``
+``...->query(); returns {string} the generated query (useful for debugging purposes)``
 
 **NB: The** ``query()`` **is NOT an executor. It's just a helper method for displaying
 a generated query and this can be helpful for debugging purposes.**
