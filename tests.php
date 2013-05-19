@@ -17,7 +17,7 @@ class MyConfig extends AbstractConfig {
 		/*
 		$this->db = array(
 
-			//default settings
+		//default settings
 	        'prefix' => 'mysql',
 	        'host' => '127.0.0.1',
 	        'dbname' => 'test',
