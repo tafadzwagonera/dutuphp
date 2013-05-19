@@ -30,12 +30,13 @@ class MyConfig extends AbstractConfig {
 	}
 }
 
-// instantiate a Config object and pass it to
-// a PDOImpl or MysqliImpl constructor
+
 $config = new MyConfig();
 
-// instatiante MysqliImpl to use mysqli
+// use mysqli
 echo "mysqli <br>";
+
+// pass in the Config object to MysqliImpl constructor
 $db = new MysqliImpl($config);
 print_r($db->select("data")->count()->fetch(MYSQLI_ASSOC));
 
@@ -43,14 +44,14 @@ echo '<br><br>';
 
 // ... boom!... switch to PDO 
 echo "PDO <br>";
+
+// pass in the Config object to PDOImpl constructor
 $db = new PDOImpl($config);
 print_r($db->select("data")->count()->fetch(PDO::FETCH_ASSOC));
 
 // don't forget to wrap the PDO version
 // inside a try {} catch() {} block;
 
-// explicitly close the connection
-$db = null;
 echo "<br><br>";
 
 // EXTRA QUERIES
