@@ -36,7 +36,7 @@ $config = new MyConfig();
 // use mysqli
 echo "mysqli <br>";
 
-// pass in the Config object to MysqliImpl constructor
+// pass the Config object into MysqliImpl constructor
 $db = new MysqliImpl($config);
 print_r($db->select("data")->count()->fetch(MYSQLI_ASSOC));
 
@@ -45,7 +45,7 @@ echo '<br><br>';
 // ... boom!... switch to PDO 
 echo "PDO <br>";
 
-// pass in the Config object to PDOImpl constructor
+// pass the Config object into PDOImpl constructor
 $db = new PDOImpl($config);
 print_r($db->select("data")->count()->fetch(PDO::FETCH_ASSOC));
 
