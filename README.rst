@@ -143,9 +143,25 @@ just a integer depending on which method was invoked.
 a generated query and this can be helpful for debugging purposes.**
 
 You can change the return type of ``fetch()`` and ``fetchAll`` using the
-``setFetchStyle()`` or you can passing in a fetch style to any one of the
-methods directly.The executor is the guy you want to call at the end of your
-chained call everytime otherwise you won't get any results.
+``setFetchStyle()`` or you can pass in a fetch style to any one of the
+methods directly. For example, if we were using ``MysqliImpl``'s ``fetchAll()``
+we can pass in ``MYSQLI_ASSOC`` or ``MYSQLI_NUM`` to get our result set as an
+associative array or numeric indexed array. Here's code sample for that::
+
+  $db->select("data")->fetchAll(MYSQLI_NUM);// return result set as numeric indexed array  
+  $db->select("data")->fetchAll(MYSQLI_NUM);// return result set as associative array  
+  $db->select("data")->fetchAll();// return result set as both an associative array and a numeric indexed array
+  
+And what about PDO?::
+
+  $db->select("data")->fetchAll(PDO::FETCH_NUM;);// return result set as numeric indexed array  
+  $db->select("data")->fetchAll(PDO::FETCH_ASSOC);// return result set as associative array
+  
+Notice that we hardly changed the code at all. In fact, the only thing that we changed
+were the fetch style constants and nothing more. 
+
+**NB**: Remember that the executor is the guy you want to call at the end of your chained call
+everytime otherwise you won't get any results.
 
 Using the table structure in the following section_ let's wrap it up with
 an example:
