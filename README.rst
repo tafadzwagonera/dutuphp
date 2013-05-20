@@ -12,9 +12,10 @@ right tool for you.
 
 So, what is DutuPHP? It's a unified, object oriented database access API
 for both PDO and mysqli. DutuPHP supports PHP 5.3 and later versions. If
-you want to know more about DutuPHP visit dutuphp.com_, for the most
-part this article focuses on bringing you up to speed with using
-DutuPHP so let's dive into that.
+you want to know more about DutuPHP visit dutuphp.com_ *(site is still
+under construction so some content may not be available)* , for the most
+part this article focuses on bringing you up to speed with using DutuPHP
+so let's dive into that.
 
 .. _dutuphp.com: http://www.dutuphp.com/
 
@@ -111,7 +112,8 @@ part we use modifiers to alter the result set returned by SELECT statement.
 
 ``$db->select("data")->orderBy([fields])...`` maps to ``"SELECT * FROM data ORDER BY [fields]"``
 
-Visit dutuphp.com_ to see a catalogue of all modifiers.
+Visit dutuphp.com_*(site is still under construction so some content may not be available)* 
+to see a catalogue of all modifiers.
 
 .. _dutuphp.com: http://www.dutuphp.com/
 
@@ -145,20 +147,23 @@ a generated query and this can be helpful for debugging purposes.**
 You can change the return type of ``fetch()`` and ``fetchAll`` using the
 ``setFetchStyle()`` or you can pass in a fetch style to any one of the
 methods directly. For example, if we were using ``MysqliImpl``'s ``fetchAll()``
-we can pass in ``MYSQLI_ASSOC`` or ``MYSQLI_NUM`` to get our result set as an
-associative array or numeric indexed array. Here's code sample for that::
+or ``fetch()``we can pass in ``MYSQLI_ASSOC`` or ``MYSQLI_NUM`` to get our
+result set as an associative array or numeric indexed array.
+Here's a code sample for that::
 
-  $db->select("data")->fetchAll(MYSQLI_NUM);// return result set as numeric indexed array  
-  $db->select("data")->fetchAll(MYSQLI_NUM);// return result set as associative array  
-  $db->select("data")->fetchAll();// return result set as both an associative array and a numeric indexed array
+  $db->select("data")->fetchAll(MYSQLI_NUM);  // return result set as numeric indexed array  
+  $db->select("data")->fetchAll(MYSQLI_ASSOC);// return result set as associative array  
+  $db->select("data")->fetchAll();            // return result set as both an associative array and a numeric indexed array
   
 And what about PDO?::
 
-  $db->select("data")->fetchAll(PDO::FETCH_NUM;);// return result set as numeric indexed array  
+  $db->select("data")->fetchAll(PDO::FETCH_NUM;); // return result set as numeric indexed array  
   $db->select("data")->fetchAll(PDO::FETCH_ASSOC);// return result set as associative array
+  $db->select("data")->fetchAll();                // return result set as both an associative array and a numeric indexed array
   
 Notice that we hardly changed the code at all. In fact, the only thing that we changed
-were the fetch style constants and nothing more. 
+were the fetch style constants and nothing more. The fetch style constants can also b
+applied to ``fetch()`` of both ``MysqliImpl`` and ``PDOImpl``.
 
 **NB**: Remember that the executor is the guy you want to call at the end of your chained call
 everytime otherwise you won't get any results.
@@ -170,10 +175,10 @@ an example:
 
 SQL: ``"SELECT * FROM data WHERE id = 3"``::
 
-  $db->select("data")->where("id = 3")->execute()\\  Return boolean true if there's a row from data where id = 3
-  $db->select("data")->where("id = 3")->fetch()  \\  Fetch a row from data where id = 3
-  $db->select("data")->where("id = 3")->rowCount()\\ Count the number of rows from data where id = 3
-  $db->select("data")->where("id = 3")->fetchAll()\\ Fetch all rows from data where id = 3
+  $db->select("data")->where("id = 3")->execute();  \\ Return boolean true if there's a row from data where id = 3
+  $db->select("data")->where("id = 3")->fetch();    \\ Fetch a row from data where id = 3
+  $db->select("data")->where("id = 3")->rowCount(); \\ Count the number of rows from data where id = 3
+  $db->select("data")->where("id = 3")->fetchAll(); \\ Fetch all rows from data where id = 3
   
 
 Examples you can try out
@@ -257,15 +262,13 @@ we get whatever number of rows the table had that were deleted.::
 Conclusion
 ==========
 
-DutuPHP is an upcoming database access API for PHP 5.3x and later releases
+DutuPHP is an upcoming database access API for PHP 5.3.x and later releases
 which is still under development. Using the API comes with the caveats that
 several features are either incomplete or not yet implemented and users may
 encounter bugs. These and other issues which will be identified and brought
 to our attention will be resolved by later versions of DutuPHP.
 
-Visit dutuphp.com_ to learn more about DutuPHP.
 
-.. _dutuphp.com: http://www.dutuphp.com/
 
 
 
