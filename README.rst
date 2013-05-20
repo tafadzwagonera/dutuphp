@@ -126,7 +126,7 @@ _________
 
 ``execute|rowCount|fetch|fetchAll(...)`` are **executors**. They execute the
 queries built up by builders and altered by modifiers. Each executor returns
-*something* when it's invoked: That *something* could be a boolean, array or
+*something* when it's invoked. That *something* could be a boolean, array or
 just a integer depending on which method was invoked.
 
 ``...->execute(); returns {boolean} a true or false value;``
