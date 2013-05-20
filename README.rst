@@ -98,7 +98,7 @@ Builders build up queries.
 Modifiers
 _________
 
-**Modifiers** change the result set returned by SQLstatement for the most
+**Modifiers** change the result set returned by SQL statement for the most
 part we use modifiers to alter the result set returned by SELECT statement.
 
 ``$db->select("data")->where("id = 3")...`` maps to ``"SELECT * FROM data WHERE id = 3"``
