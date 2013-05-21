@@ -147,7 +147,7 @@ a generated query and this can be helpful for debugging purposes.**
 You can change the return type of ``fetch()`` and ``fetchAll`` using the
 ``setFetchStyle()`` or you can pass in a fetch style to any one of the
 methods directly. For example, if we were using ``MysqliImpl``'s ``fetchAll()``
-or ``fetch()``we can pass in ``MYSQLI_ASSOC`` or ``MYSQLI_NUM`` to get our
+or ``fetch()`` we can pass in ``MYSQLI_ASSOC`` or ``MYSQLI_NUM`` to get our
 result set as an associative array or numeric indexed array.
 Here's a code sample for that::
 
