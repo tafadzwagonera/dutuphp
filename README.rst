@@ -259,8 +259,8 @@ we get whatever number of rows the table had that were deleted.::
   //use ...->where() when you want to run complex matching expressions
   $db->delete("data")->where("id <= 3 AND ... ")->rowCount();// maps to "DELETE FROM data WHERE id <= 3 AND ... "
 
-Conclusion
-==========
+Wrap up
+=======
 
 DutuPHP is an upcoming database access API for PHP 5.3.x and later releases
 which is still under development. Using the API comes with the caveats that
