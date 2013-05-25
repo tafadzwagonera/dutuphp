@@ -41,8 +41,8 @@ but using DutuPHP's unified OO API, we just do it this way::
   $db = new PDOImpl($config);
   $db->select("data")->rowCount();
   
-  // Awesome, isn't it? Oh, and don't forget to wrap the PDO version
-  // inside the try {} catch() {} block
+  // there's no need to change our code during the switch
+  // don't forget to wrap the PDO version inside the try {} catch() {} block
   
   
 Installation
@@ -192,6 +192,8 @@ with the following data::
   (5, 'Tanya'),
   (6, 'Tapiwa');
 
+**NB:** Since ``PDOImpl`` and ``MysqliImpl`` use the same API you don't
+have to change code when switching between the two.
 
 Select
 ______
