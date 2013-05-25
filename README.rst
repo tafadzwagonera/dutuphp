@@ -1,12 +1,12 @@
 DutuPHP
 =======
 
-DutuPHP is a unified, object oriented API for PDO and mysqli.
-DutuPHP supports PHP 5.3 and later versions. If you want to
-know more about DutuPHP visit dutuphp.com_ *(site is still under
-construction so some content may not be available)* , for the most
-part this article focuses on bringing you up to speed with using
-DutuPHP so let's dive into that.
+DutuPHP is a unified, object oriented API for PDO and mysqli under
+MIT open source license. DutuPHP supports PHP 5.3 and later versions.
+If you want to know more about DutuPHP visit dutuphp.com_ *(site
+is still under construction so some content may not be available)* ,
+for the most part this article focuses on bringing you up to speed
+with using DutuPHP so let's dive into that.
 
 .. _dutuphp.com: http://www.dutuphp.com/
 
