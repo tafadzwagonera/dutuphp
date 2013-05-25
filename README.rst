@@ -172,8 +172,8 @@ SQL: ``"SELECT * FROM data WHERE id = 3"``::
   $db->select("data")->where("id = 3")->fetchAll(); \\ Fetch all rows from data where id = 3
   
 
-Examples you can try out
-========================
+Examples 
+========
 
 Suppose we have the following table structure::
 
