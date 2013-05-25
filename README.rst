@@ -103,11 +103,6 @@ part we use modifiers to alter the result set returned by SELECT statement.
 
 ``$db->select("data")->orderBy([fields])...`` maps to ``"SELECT * FROM data ORDER BY [fields]"``
 
-Visit dutuphp.com_*(site is still under construction so some content may not be available)* 
-to see a catalogue of all modifiers.
-
-.. _dutuphp.com: http://www.dutuphp.com/
-
 The ellipsis "..." at the end of each expression above means that the
 modifiers are part of a chained call which eventually ends with an
 executor. Since modifiers help in building up the query, they never execute
