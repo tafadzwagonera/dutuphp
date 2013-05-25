@@ -192,8 +192,9 @@ with the following data::
   (5, 'Tanya'),
   (6, 'Tapiwa');
 
-**NB:** Since ``PDOImpl`` and ``MysqliImpl`` use the same API you don't
-have to change code when switching between the two.
+**NB:** Since ``PDOImpl`` and ``MysqliImpl`` use the same API our queries
+are a "one size fits all" solution to PDO and mysqli.
+
 
 Select
 ______
