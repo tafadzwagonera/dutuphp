@@ -93,11 +93,11 @@ _________
 **Modifiers** change the result set returned by SQL statement for the most
 part we use modifiers to alter the result set returned by SELECT statement.
 
-``$db->select("data")->where("id = 3")...`` maps to ``"SELECT * FROM data WHERE id = 3"``
+``$db->select("data", [fields])->distinct()...`` maps to ``"SELECT DISTINCT [fields] FROM data"``
 
 ``$db->select("data")->count()...`` maps to ``"SELECT COUNT(*) FROM data"``
 
-``$db->select("data", [fields])->distinct()...`` maps to ``"SELECT DISTINCT [fields] FROM data"``
+``$db->select("data")->where("id = 3")...`` maps to ``"SELECT * FROM data WHERE id = 3"``
 
 ``$db->select("data")->groupBy([fields])...`` maps to ``"SELECT * FROM data GROUP BY [fields]"``
 
@@ -107,6 +107,16 @@ The ellipsis "..." at the end of each expression above means that the
 modifiers are part of a chained call which eventually ends with an
 executor. Since modifiers help in building up the query, they never execute
 it.
+
+Here's a list of modifiers currently supported by DutuPHP::
+
+  distinct()
+  count($field, [$as])
+  where($clause)
+  groupBy(array $fields, [$order])
+  having($clause)
+  orderBy(array $fields, [$order])
+  limit($offset, [$max])
 
 Executors
 _________
