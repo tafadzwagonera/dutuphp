@@ -117,6 +117,10 @@ Here's a list of modifiers currently supported by DutuPHP::
   having($clause)
   orderBy(array $fields, [$order])
   limit($offset, [$max])
+  
+An illustration of how other modifiers work can be found here_.
+
+.. _here: https://github.com/tafadzwagonera/dutuphp/blob/master/tests.php
 
 Executors
 _________
