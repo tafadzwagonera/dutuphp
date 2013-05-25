@@ -10,12 +10,12 @@ learning them wouldn't be so much of a hassle? If you were wishing
 badly for these to happen then look no further, DutuPHP is the
 right tool for you.
 
-So, what is DutuPHP? It's a unified, object oriented database access API
-for both PDO and mysqli. DutuPHP supports PHP 5.3 and later versions. If
-you want to know more about DutuPHP visit dutuphp.com_ *(site is still
-under construction so some content may not be available)* , for the most
-part this article focuses on bringing you up to speed with using DutuPHP
-so let's dive into that.
+So, what is DutuPHP? It's a unified, object oriented API for PDO and
+mysqli. DutuPHP supports PHP 5.3 and later versions. If you want to
+know more about DutuPHP visit dutuphp.com_ *(site is still under
+construction so some content may not be available)* , for the most
+part this article focuses on bringing you up to speed with using
+DutuPHP so let's dive into that.
 
 .. _dutuphp.com: http://www.dutuphp.com/
 
@@ -262,11 +262,11 @@ we get whatever number of rows the table had that were deleted.::
 Wrap up
 =======
 
-DutuPHP is an upcoming database access API for PHP 5.3.x and later releases
-which is still under development. Using the API comes with the caveats that
-several features are either incomplete or not yet implemented and users may
-encounter bugs. These and other issues which will be identified and brought
-to our attention will be resolved by later versions of DutuPHP.
+DutuPHP is an upcoming API for PDO and mysqli that is still under
+development. Using the API comes with the caveats that several features
+are either incomplete or not yet implemented and users may encounter bugs.
+These and other issues which will be identified and brought to our
+attention will be resolved by later versions of DutuPHP.
 
 
 
