@@ -79,11 +79,11 @@ ________
 ``select|update|delete|insert(table, [fields])`` methods are the **builders**.
 Builders build up queries.
 
-``$db->select(table, [fields])`` maps to ``"SELECT [fields] FROM table WHERE ..."``
+``$db->select(table, [fields])`` maps to ``"SELECT [fields] FROM table"``
 
-``$db->insert(table, [fields])`` maps to ``"INSERT INTO table ([fields' keys]) VALUES ..."``
+``$db->insert(table, [fields])`` maps to ``"INSERT INTO table ([fields' keys]) VALUES ([fields' values])"``
 
-``$db->update(table, [fields])`` maps to ``"UPDATE table SET [field key] = [field value], etc WHERE ..."``
+``$db->update(table, [fields])`` maps to ``"UPDATE table SET field1 = value1, field2 =  value2, etc"``
 
 ``$db->delete(table, [where])`` maps to ``"DELETE FROM table WHERE [where]"``
 
