@@ -165,6 +165,7 @@ SQL: ``"SELECT * FROM data WHERE id = 3"``::
   $db->select("data")->where("id = 3")->fetch();    \\ Fetch a row from data where id = 3
   $db->select("data")->where("id = 3")->rowCount(); \\ Count the number of rows from data where id = 3
   $db->select("data")->where("id = 3")->fetchAll(); \\ Fetch all rows from data where id = 3
+  $db->select("data")->where("id = 3")->query();    \\ Returns {string} "SELECT * FROM data WHERE id = 3"
   
 
 Examples 
