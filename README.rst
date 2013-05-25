@@ -119,7 +119,7 @@ just a integer depending on which method was invoked.
 
 ``...->execute(); returns {boolean} a true or false value;``
 
-``...->rowCount(); returns {integer} the number of rows satisfying the condition of the query``
+``...->rowCount(); returns {integer} the number of rows affected by the last query``
 
 ``...->fetch(); returns {array} a row satisfying the condition of the query``
 
