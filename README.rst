@@ -117,7 +117,7 @@ queries built up by builders and altered by modifiers. Each executor returns
 *something* when it's invoked. That *something* could be a boolean, array or
 just a integer depending on which method was invoked.
 
-``...->execute();  returns {boolean} a true or false value;``
+``...->execute();  returns {boolean} a true value on successful execution otherwise false;``
 
 ``...->rowCount(); returns {integer} the number of rows affected by the last query``
 
