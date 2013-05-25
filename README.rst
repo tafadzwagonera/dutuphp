@@ -121,9 +121,9 @@ just a integer depending on which method was invoked.
 
 ``...->rowCount(); returns {integer} the number of rows affected by the last query``
 
-``...->fetch();    returns {array} a row satisfying the condition of the query``
+``...->fetch();    returns {array} a row satisfying the query``
 
-``...->fetchAll(); returns {array of arrays} a number of rows satisfying the condition of the query``
+``...->fetchAll(); returns {array of arrays} a number of rows satisfying the query``
 
 ``...->query();    returns {string} the generated query (useful for debugging purposes)``
 
