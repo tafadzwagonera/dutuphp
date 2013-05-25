@@ -8,7 +8,7 @@ is still under construction so some content may not be available)* ,
 for the most part this article focuses on bringing you up to speed
 with using DutuPHP so let's dive into that.
 
-.. _dutuphp.com: http://www.dutuphp.com/
+.. _dutuphp.com: http://www.dutuphp.com/about
 
 Suppose we want to find out how many rows we have in a table
 "data"
