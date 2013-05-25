@@ -137,14 +137,14 @@ or ``fetch()`` we can pass in ``MYSQLI_ASSOC`` or ``MYSQLI_NUM`` to get our
 result set as an associative array or numeric indexed array.
 Here's a code sample for that::
 
-  $db->select("data")->fetchAll(MYSQLI_NUM);  // return result set as numeric indexed array  
-  $db->select("data")->fetchAll(MYSQLI_ASSOC);// return result set as associative array  
+  $db->select("data")->fetchAll(MYSQLI_NUM);  // return result set as a numeric indexed array  
+  $db->select("data")->fetchAll(MYSQLI_ASSOC);// return result set as an associative array  
   $db->select("data")->fetchAll();            // return result set as both an associative array and a numeric indexed array
   
 And what about PDO?::
 
-  $db->select("data")->fetchAll(PDO::FETCH_NUM;); // return result set as numeric indexed array  
-  $db->select("data")->fetchAll(PDO::FETCH_ASSOC);// return result set as associative array
+  $db->select("data")->fetchAll(PDO::FETCH_NUM;); // return result set as a numeric indexed array  
+  $db->select("data")->fetchAll(PDO::FETCH_ASSOC);// return result set as an associative array
   $db->select("data")->fetchAll();                // return result set as both an associative array and a numeric indexed array
   
 Notice that we hardly changed the code at all. In fact, the only thing that we changed
