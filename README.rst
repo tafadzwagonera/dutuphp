@@ -270,6 +270,10 @@ we get whatever number of rows the table had that were deleted.::
 
   //use ...->where() when you want to run complex matching expressions
   $db->delete("data")->where("id <= ? AND ... ", array(2, ...))->affectedRows();// maps to "DELETE FROM data WHERE id <= 3 AND ... "
+  
+Get more examples here_.
+
+.. _here: https://github.com/tafadzwagonera/dutuphp/blob/master/tests.php
 
 Wrap up
 =======
