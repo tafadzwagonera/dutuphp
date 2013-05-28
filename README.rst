@@ -99,7 +99,7 @@ part we use modifiers to alter the result set returned by SELECT statement.
 
 MysqliImpl and PDOImpl, respectively::
 
-  $db->select("data")->where("id = ?", array(3))... maps to "SELECT * FROM data WHERE id = 3"
+  $db->select("data")->where("id = ?", array(3))...           maps to "SELECT * FROM data WHERE id = 3"
   $db->select("data")->where("id = :id", array('id' => 3))... maps to "SELECT * FROM data WHERE id = 3"
 
 ``$db->select("data")->groupBy([fields])...`` maps to ``"SELECT * FROM data GROUP BY [fields]"``
@@ -233,8 +233,8 @@ ______
 
 MysqliImpl and PDOImpl, respectively::
 
-  $db->select("data")->count()->where("id = ? AND name = ?", array(4, 'Tanaka'))->fetch() maps to "SELECT COUNT(*) FROM data WHERE id = 4 AND name = 'Tanaka'"
-  $db->select("data")->count()->where("id = :id AND name = :name", array('id' => 4, 'name'=> 'Tanaka'))->fetch() maps to "SELECT COUNT(*) FROM data WHERE id = 4 AND name = 'Tanaka'"
+  $db->select("data")->count()->where("id = ? AND name = ?", array(4, 'Tanaka'))->fetch();                        maps to "SELECT COUNT(*) FROM data WHERE id = 4 AND name = 'Tanaka'"
+  $db->select("data")->count()->where("id = :id AND name = :name", array('id' => 4, 'name'=> 'Tanaka'))->fetch(); maps to "SELECT COUNT(*) FROM data WHERE id = 4 AND name = 'Tanaka'"
 
 Insert
 ______
@@ -250,7 +250,7 @@ ______
 MysqliImpl and PDOImpl, respectively::
 
   $fields = array('text' => 'Tapiwa');
-  $db->update('data', $fields)->where("id = ?", array(2))->affectedRows(); maps to "UPDATE data SET text = 'Tapiwa' WHERE id = 4"
+  $db->update('data', $fields)->where("id = ?", array(2))->affectedRows();           maps to "UPDATE data SET text = 'Tapiwa' WHERE id = 4"
   $db->update('data', $fields)->where("id = :id", array('id' => 2))->affectedRows(); maps to "UPDATE data SET text = 'Tapiwa' WHERE id = 4"
 
 Delete
@@ -260,7 +260,7 @@ ______
 
 is the convenient form of MysqliImpl and PDOImpl, respectively::
 
-  $db->delete("data")->where("id = ?", array(3))->affectedRows(); maps to "DELETE FROM data WHERE id = 3"
+  $db->delete("data")->where("id = ?", array(3))->affectedRows();           maps to "DELETE FROM data WHERE id = 3"
   $db->delete("data")->where("id = :id", array('id' => 3))->affectedRows(); maps to "DELETE FROM data WHERE id = 3"
 
 ``$db->delete("data")->affectedRows();`` maps to ``"DELETE FROM data"``
