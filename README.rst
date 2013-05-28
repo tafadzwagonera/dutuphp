@@ -97,7 +97,7 @@ part we use modifiers to alter the result set returned by SELECT statement.
 
 ``$db->select("data")->count()...`` maps to ``"SELECT COUNT(*) FROM data"``
 
-MysqliImpl and PDOImpl (respectively)::
+MysqliImpl and PDOImpl, respectively::
 
   $db->select("data")->where("id = ?", array(3))... maps to "SELECT * FROM data WHERE id = 3"
   $db->select("data")->where("id = :id", array('id' => 3))... maps to "SELECT * FROM data WHERE id = 3"
@@ -177,6 +177,7 @@ an example:
 .. _section: https://github.com/tafadzwagonera/dutuphp/edit/master/README.rst#examples-you-can-try-out
 
 **MysqliImpl**
+
 SQL: ``"SELECT * FROM data WHERE id = 3"``::
 
   $db->select("data")->where("id = ?", array(3))->execute();      \\ Return boolean true if there's a row from data where id = 3
@@ -186,6 +187,7 @@ SQL: ``"SELECT * FROM data WHERE id = 3"``::
   $db->select("data")->where("id = ?", array(3))->query();        \\ Returns {string} "SELECT * FROM data WHERE id = ?"
 
 **PDOImpl**
+
 SQL: ``"SELECT * FROM data WHERE id = 3"``::
 
   $db->select("data")->where("id = :id", array('id' => 3))->execute();      \\ Return boolean true if there's a row from data where id = 3
@@ -229,7 +231,7 @@ ______
 
 ``$db->select("data")->fetchAll();`` maps to ``"SELECT * FROM data"``
 
-MysqliImpl and PDOImpl (respectively)::
+MysqliImpl and PDOImpl, respectively::
 
   $db->select("data")->count()->where("id = ? AND name = ?", array(4, 'Tanaka'))->fetch() maps to "SELECT COUNT(*) FROM data WHERE id = 4 AND name = 'Tanaka'"
   $db->select("data")->count()->where("id = :id AND name = :name", array('id' => 4, 'name'=> 'Tanaka'))->fetch() maps to "SELECT COUNT(*) FROM data WHERE id = 4 AND name = 'Tanaka'"
@@ -245,7 +247,7 @@ Update
 ______
 
 
-MysqliImpl and PDOImpl (respectively)::
+MysqliImpl and PDOImpl, respectively::
 
   $fields = array('text' => 'Tapiwa');
   $db->update('data', $fields)->where("id = ?", array(2))->affectedRows(); maps to "UPDATE data SET text = 'Tapiwa' WHERE id = 4"
@@ -256,7 +258,7 @@ ______
 
 ``$db->delete("data", array("id" => 3))->affectedRows();`` maps to ``"DELETE FROM data WHERE id = 3"``
 
-is the convenient form of MysqliImpl and PDOImpl (respectively)::
+is the convenient form of MysqliImpl and PDOImpl, respectively::
 
   $db->delete("data")->where("id = ?", array(3))->affectedRows(); maps to "DELETE FROM data WHERE id = 3"
   $db->delete("data")->where("id = :id", array('id' => 3))->affectedRows(); maps to "DELETE FROM data WHERE id = 3"
