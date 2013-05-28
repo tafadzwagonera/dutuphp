@@ -174,7 +174,7 @@ everytime otherwise you won't get any results.
 Using the table structure in the following section_ let's wrap it up with
 an example:
 
-.. _section: https://github.com/tafadzwagonera/dutuphp/edit/master/README.rst#examples-you-can-try-out
+.. _section: https://github.com/tafadzwagonera/dutuphp/blob/master/README.rst#examples
 
 **MysqliImpl**
 
