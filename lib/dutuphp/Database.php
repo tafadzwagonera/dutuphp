@@ -76,8 +76,8 @@ interface Database {
      * by a SELECT statement
      *
      * @access public
-     * @param array  $fields  the fields to apply DISTINCT to
-     * @param string  $as       a name for the output field 
+     * @param array   $fields  the fields to apply DISTINCT to
+     * @param string  $as      a name for the output field 
      * @return object  Database
      * @author Tafadzwa Gonera
      */
