@@ -113,7 +113,7 @@ it.
 
 Here's a list of modifiers currently supported by DutuPHP::
 
-  distinct()
+  distinct($array)
   count($field, [$as])
   where($clause, $array)
   groupBy(array $fields, [$order])
@@ -225,7 +225,7 @@ with the following data::
 Select
 ______
 
-``$db->select("data", array('name'))->distinct()->fetchAll();`` maps to ``"SELECT DISTINCT name FROM data"``
+``$db->select("data")->distinct(array('name'))->fetchAll();`` maps to ``"SELECT DISTINCT name FROM data"``
 
 ``$db->select("data", array('name'))->count()->fetch();`` maps to ``"SELECT name, COUNT(*) FROM data"``
 

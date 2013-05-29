@@ -233,13 +233,18 @@ class PDOImpl implements Database {
      * by a SELECT statement
      *
      * @access public
+     * @param array  $fields  the fields to apply DISTINCT to
+     * @param string  $as       a name for the output field 
      * @return object  Database
      * @author Tafadzwa Gonera
      */
-    public function distinct() {
-        $mod = " DISTINCT ";
-        $pos = strpos($this->sql, " ");
-        $this->sql = substr_replace($this->sql, $mod, $pos, 0);
+    public function distinct(array $fields, $as = null) {
+        $fieldNames = null;
+        foreach ($fields as $field)
+            $fieldNames .= "$field, ";
+        $fieldNames = rtrim($fieldNames, ' , ');
+        $fieldNames = " $fieldNames";
+        $this->modify("DISTINCT", $fieldNames, $as);
         return $this;
     }
 
@@ -254,6 +259,7 @@ class PDOImpl implements Database {
      * @author Tafadzwa Gonera
      */
     public function count($field = "*", $as = null) {
+        $field = "($field)";
         $this->modify("COUNT", $field, $as);
         return $this;
     }
@@ -454,9 +460,9 @@ class PDOImpl implements Database {
 
         $buildQuery = function () use($clause, $field, $as) {
             if (!empty($as)) {
-                return " $clause($field) AS $as";
+                return " $clause$field AS $as";
             } else {
-                return " $clause($field)";
+                return " $clause$field";
             }
         };
 

@@ -117,9 +117,9 @@ echo "<br><br>";
 
 // $db->select("data")->count('DISTINCT(name)', 'students')->fetch();
 
-// $db->select("data", array('name'))->distinct()->fetchAll();
+// $db->select("data")->distinct(array('name'))->fetchAll();
 
-// $db->select("data", array('id', 'name'))->distinct()->fetchAll();
+// $db->select("data")->distinct(array('id', 'name'))->fetchAll();
 
 // $db->select("data")->limit(2)->fetchAll();
 
