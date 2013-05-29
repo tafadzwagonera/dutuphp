@@ -208,13 +208,13 @@ Suppose we have the following table structure::
 
   CREATE TABLE IF NOT EXISTS `data` (
     `id` int(11) NOT NULL AUTO_INCREMENT,
-    `name` varchar(255) NOT NULL,
+    `text` varchar(255) NOT NULL,
     PRIMARY KEY (`id`)
   ) ENGINE=InnoDB  DEFAULT CHARSET=latin1;
 
 with the following data::
 
-  INSERT INTO `data` (`id`, `name`) VALUES
+  INSERT INTO `data` (`id`, `text`) VALUES
   (1, 'Tanya'),
   (2, 'Tadiwa'),
   (3, 'Tinashe'),
