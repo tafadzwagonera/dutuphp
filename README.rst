@@ -113,12 +113,18 @@ it.
 
 Here's a list of modifiers currently supported by DutuPHP::
 
-  distinct($array fields)
+  distinct(array $fields, [$as])
+
   count($field, [$as])
-  where($clause, $array)
+
+  where($clause, array $values)
+
   groupBy(array $fields, [$order])
-  having($clause, $array)
+
+  having($clause, array $values)
+
   orderBy(array $fields, [$order])
+  
   limit($offset, [$max])
   
 An illustration of how other modifiers work can be found here_.
