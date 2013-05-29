@@ -208,13 +208,13 @@ Suppose we have the following table structure::
 
   CREATE TABLE IF NOT EXISTS `data` (
     `id` int(11) NOT NULL AUTO_INCREMENT,
-    `text` varchar(255) NOT NULL,
+    `name` varchar(255) NOT NULL,
     PRIMARY KEY (`id`)
   ) ENGINE=InnoDB  DEFAULT CHARSET=latin1;
 
 with the following data::
 
-  INSERT INTO `data` (`id`, `text`) VALUES
+  INSERT INTO `data` (`id`, `name`) VALUES
   (1, 'Tanya'),
   (2, 'Tadiwa'),
   (3, 'Tinashe'),
@@ -225,9 +225,9 @@ with the following data::
 Select
 ______
 
-``$db->select("data", array('text'))->distinct()->fetchAll();`` maps to ``"SELECT DISTINCT text FROM data"``
+``$db->select("data", array('name'))->distinct()->fetchAll();`` maps to ``"SELECT DISTINCT name FROM data"``
 
-``$db->select("data", array('text'))->count()->fetch();`` maps to ``"SELECT text, COUNT(*) FROM data"``
+``$db->select("data", array('name'))->count()->fetch();`` maps to ``"SELECT name, COUNT(*) FROM data"``
 
 ``$db->select("data")->fetchAll();`` maps to ``"SELECT * FROM data"``
 
@@ -239,9 +239,9 @@ MysqliImpl and PDOImpl, respectively::
 Insert
 ______
 
-``$fields = array('id' => '', 'text' => 'Tanya');``
+``$fields = array('id' => '', 'name' => 'Tanya');``
 
-``$db->insert('data', $fields)->affectedRows();`` maps to ``"INSERT INTO data(id, text) VALUES('', 'Tanya')"``
+``$db->insert('data', $fields)->affectedRows();`` maps to ``"INSERT INTO data(id, name) VALUES('', 'Tanya')"``
 
 Update
 ______
@@ -249,9 +249,9 @@ ______
 
 MysqliImpl and PDOImpl, respectively::
 
-  $fields = array('text' => 'Tapiwa');
-  $db->update('data', $fields)->where("id = ?", array(2))->affectedRows();           maps to "UPDATE data SET text = 'Tapiwa' WHERE id = 4"
-  $db->update('data', $fields)->where("id = :id", array('id' => 2))->affectedRows(); maps to "UPDATE data SET text = 'Tapiwa' WHERE id = 4"
+  $fields = array('name' => 'Tapiwa');
+  $db->update('data', $fields)->where("id = ?", array(2))->affectedRows();           maps to "UPDATE data SET name = 'Tapiwa' WHERE id = 4"
+  $db->update('data', $fields)->where("id = :id", array('id' => 2))->affectedRows(); maps to "UPDATE data SET name = 'Tapiwa' WHERE id = 4"
 
 Delete
 ______
