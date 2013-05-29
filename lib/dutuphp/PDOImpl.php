@@ -148,7 +148,7 @@ class PDOImpl implements Database {
      * Builds up a query to insert a new row in a table
      *
      * @access public
-     * @param string                       $table  a table name
+     * @param string             $table   a table name
      * @param associative array  $fields  fields and values to be inserted
      * @return object  Database
      * @author Tafadzwa Gonera
@@ -166,8 +166,8 @@ class PDOImpl implements Database {
      * condition or some conditions
      *
      * @access public
-     * @param string                       $table  a table name
-     * @param associative array  $fields  an of fields and values forming the SET clause
+     * @param string             $table   a table name
+     * @param associative array  $fields  fields and values forming the SET clause
      * @return object  Database
      * @author Tafadzwa Gonera
      */
@@ -186,7 +186,7 @@ class PDOImpl implements Database {
      * condition or some conditions
      *
      * @access public
-     * @param string                       $table    a table name
+     * @param string             $table  a table name
      * @param associative array  $where  a field and its value forming the WHERE clause
      * @return object  Database
      * @author Tafadzwa Gonera
@@ -210,7 +210,7 @@ class PDOImpl implements Database {
      *
      * @access public
      * @param string  $table  a table name
-     * @param array  $fields  an array of fields to be selected 
+     * @param array  $fields  fields to be selected 
      * @return object  Database
      * @author Tafadzwa Gonera
      */
@@ -249,7 +249,7 @@ class PDOImpl implements Database {
      * 
      * @access public
      * @param string  $field  the field to apply COUNT to
-     * @param string  $as      a name for the output field
+     * @param string  $as     a name for the output field
      * @return object  Database
      * @author Tafadzwa Gonera
      */
@@ -258,13 +258,13 @@ class PDOImpl implements Database {
         return $this;
     }
 
-     /**
+    /**
      * Specifies the conditions or conditions that a row or rows must satisfy
      * to be selected
      *
      * @access public
-     * @param string  $clause    a condition or conditions that a row or rows must satisfy to be selected
-     * @param array  $params  an array of values to be bound to placeholders in the clause
+     * @param string  $clause  a condition or conditions that a row or rows must satisfy to be selected
+     * @param array   $params  an array of values to be bound to placeholders in the clause
      * @return object  Database
      * @author Tafadzwa Gonera
      */
@@ -279,7 +279,7 @@ class PDOImpl implements Database {
      *
      * @access public
      * @param array   $fields  the GROUP BY fields
-     * @param string  $order  the order in which the output rows are sorted default is ASC
+     * @param string  $order   the order in which the output rows are sorted, default is ASC
      * @return object  Database
      * @author Tafadzwa Gonera
      */
@@ -298,8 +298,8 @@ class PDOImpl implements Database {
      * formed by the GROUP BY clause
      *
      * @access public
-     * @param string  $clause    a condition or conditions that a row or rows must satisfy to be selected
-     * @param array  $params  an array of values to be bound to placeholders in the clause
+     * @param string  $clause  a condition or conditions that a row or rows must satisfy to be selected
+     * @param array   $params  an array of values to be bound to placeholders in the clause
      * @return object  Database
      * @author Tafadzwa Gonera
      */
@@ -318,8 +318,8 @@ class PDOImpl implements Database {
      * Sorts output rows according to ORDER BY fields
      *
      * @access public
-     * @param array   $fields  the ORDER BY fields
-     * @param string  $order  the order in which the output rows are sorted default is ASC
+     * @param array   $fields the ORDER BY fields
+     * @param string  $order  the order in which the output rows are sorted, default is ASC
      * @return object  Database
      * @author Tafadzwa Gonera
      */
@@ -440,8 +440,8 @@ class PDOImpl implements Database {
      *
      * @access public
      * @param string  $clause  the modifying clause
-     * @param string  $sql        the SQL statement
-     * @param string  $as         a field specified by AS clause
+     * @param string  $sql     the SQL statement
+     * @param string  $as      a field specified by AS clause
      * @author Tafadzwa Gonera
      */
     public function modify($clause, $field, $as) {
@@ -466,6 +466,7 @@ class PDOImpl implements Database {
             $this->sql .= " $fieldNames,";
             $this->sql .= $buildQuery();
         }
+        
         $this->sql .= " $from $table";
     }
 
