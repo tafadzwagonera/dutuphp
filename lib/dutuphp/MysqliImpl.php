@@ -52,7 +52,7 @@ class MysqliImpl implements Database {
     private $fetchStyle = MYSQLI_BOTH;
     
      /**
-     * Prepares a query and binds an array of its parameters to values
+     * Prepares a query and binds an array of values to its placeholders
      *
      * @access private
      * @throws PDOException 
@@ -74,10 +74,9 @@ class MysqliImpl implements Database {
     }
     
     /**
+     * Determines the type of a value     
      * This method is needed for prepared statements. They require
      * the data type of the field to be bound with "i" s", etc.
-     * This function takes the input, determines what type it is,
-     * and then updates the param_type.
      *
      * @access private
      * @param mixed  $item  a value input to determine the type

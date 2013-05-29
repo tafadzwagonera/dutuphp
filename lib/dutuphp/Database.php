@@ -28,7 +28,7 @@ interface Database {
      * Builds up a query to insert a new row in a table
      *
      * @access public
-     * @param string                       $table  a table name
+     * @param string             $table  a table name
      * @param associative array  $fields  fields and values to be inserted
      * @return object  Database
      * @author Tafadzwa Gonera
@@ -40,7 +40,7 @@ interface Database {
      * condition or some conditions
      *
      * @access public
-     * @param string                       $table  a table name
+     * @param string             $table  a table name
      * @param associative array  $fields  an of fields and values forming the SET clause
      * @return object  Database
      * @author Tafadzwa Gonera
@@ -52,7 +52,7 @@ interface Database {
      * condition or some conditions
      *
      * @access public
-     * @param string                       $table    a table name
+     * @param string             $table    a table name
      * @param associative array  $where  a field and its value forming the WHERE clause
      * @return object  Database
      * @author Tafadzwa Gonera
@@ -99,7 +99,7 @@ interface Database {
      *
      * @access public
      * @param string  $clause    a condition or conditions that a row or rows must satisfy to be selected
-     * @param array  $params  an array of values to be bound to placeholders in the clause
+     * @param array   $params  an array of values to be bound to placeholders in the clause
      * @return object  Database
      * @author Tafadzwa Gonera
      */
@@ -122,7 +122,7 @@ interface Database {
      *
      * @access public
      * @param string  $clause    a condition or conditions that a row or rows must satisfy to be selected
-     * @param array  $params  an array of values to be bound to placeholders in the clause
+     * @param array   $params  an array of values to be bound to placeholders in the clause
      * @return object  Database
      * @author Tafadzwa Gonera
      */
