@@ -31,7 +31,7 @@ abstract class AbstractConfig implements Config {
         'username' => 'root',
         'password' => '',
         'socket' => '3306',
-        'port' => '',
+        'port' => ''
     );
 
     /**
