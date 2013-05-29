@@ -113,7 +113,7 @@ it.
 
 Here's a list of modifiers currently supported by DutuPHP::
 
-  distinct($array)
+  distinct($array fields)
   count($field, [$as])
   where($clause, $array)
   groupBy(array $fields, [$order])
