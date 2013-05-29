@@ -95,7 +95,7 @@ class PDOImpl implements Database {
     }
 
     /**
-     *Controls how the next row will be returned to the caller
+     * Determines how the next row will be returned to the caller
      *
      * @access public
      * @param integer  $fetchStyle  determines how a row is returned
